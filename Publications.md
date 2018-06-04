@@ -17,6 +17,6 @@ layout: home
 {% for year in (2013..2017) reversed %}
 ### {{year}}
 
-{% bibliography --file Published --template bibtemplate --style _bibliography/cocolab_style.csl --query @*[year={{year}}] %}
+{% bibliography  --template bibtemplate --file Published --style _bibliography/cocolab_style.csl --query @*[year={{year}}] %}
 
 {% endfor %}

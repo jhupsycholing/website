@@ -11,11 +11,41 @@ layout: home
 #### **Tal Linzen**		
 
 
-email: <a href="mailto: tallinzen@jhu.edu">tallinzen@jhu.edu</a>
+email: <a href="mailto: tal.linzen@jhu.edu">tal.linzen@jhu.edu</a>
 
 ![tal-image](images/tallinzenpic.jpg){:style="width:200px;"}
 
 <br /><br />
+
+### Post-Doc
+---
+#### **Marten Van Schijndel**
+
+email: <a href="mailto: mvansch2@jhu.edu">mvansch2@jhu.edu</a>
+
+![marty-image](images/face.jpg){:style="width:200px;"}
+
+<br /><br /><br />
+
+
+### PhD Students
+---
+#### **Grusha Sai Prasad**
+
+email: <a href="mailto: gsaipra1@jhu.edu">gsaipra1@jhu.edu</a>
+
+![grusha-image](images/grushapic.jpeg){:style="width:200px;"}
+
+<br /><br />
+
+---
+#### **Tom McCoy**
+
+email: <a href='mailto: tom.mccoy@jhu.edu'>tom.mccoy@jhu.edu</a>
+
+![tom-image](images/mccoyheadshot.jpg){:style='width:200px;'}
+
+<br /> <br />
 
 ### Lab Manager
 ---
@@ -24,5 +54,4 @@ email: <a href="mailto: tallinzen@jhu.edu">tallinzen@jhu.edu</a>
 
 email: <a href="mailto: bleona10@jhu.edu">bleona10@jhu.edu</a>
 
-![brian-image](images/brian.png){:style="width:200px;float:left;"} 
-
+![brian-image](images/brian.png){:style="width:200px;"}

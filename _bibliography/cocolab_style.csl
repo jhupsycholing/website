@@ -50,7 +50,7 @@
       <if type="chapter paper-conference entry-dictionary entry-encyclopedia" match="any">
         <names variable="editor translator container-author" delimiter=", ">
           <name and="symbol" initialize-with=". " delimiter=", "/>
-          <label form="short" prefix=" (" text-case="title" suffix=")"/>
+          <label form="long" prefix=" (" text-case="title" suffix=")"/>
         </names>
       </if>
     </choose>
@@ -60,7 +60,7 @@
       <if type="article-journal chapter paper-conference entry-dictionary entry-encyclopedia" match="none">
         <names variable="translator editor container-author" delimiter=", " prefix=" (" suffix=")">
           <name and="symbol" initialize-with=". " delimiter=", "/>
-          <label form="short" prefix=", " text-case="title"/>
+          <label form="long" prefix=", " text-case="title"/>
         </names>
       </if>
     </choose>

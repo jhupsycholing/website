@@ -5,6 +5,8 @@
 layout: home
 ---
 
+## 
+
 What are the mental representations that constitute our knowledge of language? How do we use them to understand and produce language?
 
 
@@ -14,3 +16,7 @@ We then compare the predictions of these models to human language comprehension.
 
 Finally, we use linguistics and psycholinguistics to understand and improve artificial intelligence systems, in particular "deep learning" models that are otherwise difficult to analyze.
 
+
+---
+
+Currently located in **room 113 of Krieger Hall** on JHU's Homewood Campus

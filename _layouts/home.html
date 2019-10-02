@@ -24,7 +24,7 @@
 		<style type="text/css" media="screen">
 			html { margin-top: 32px !important; }
 			* html body { margin-top: 32px !important; }
-			@media screen and ( max-width: 782px ) {
+			@media screen and ( max-width: 1000px ) {
 				html { margin-top: 46px !important; }
 				* html body { margin-top: 46px !important; }
 		:q
@@ -38,6 +38,13 @@
 				width:100%;
 
 			}
+			hr {
+				border:solid black;
+				border-width: 1px 0 0;
+			}
+			a{
+				color:#2d6970;
+			}
 			#pagelinks li{
 				width:10%;
 				display: inline;
@@ -45,15 +52,20 @@
 			}
 			#pagelinks a{
 				font-size:20px;
+				color:#2d6970;
+			}
+			.flex-container{
+				display:flex;
+				flex-direction:row;
 			}
 			</style>
 
 	</head>
-	<body>
-		<div id="header">		
-			<h1 id="blog-title"><a href="https://psycholing.web.jhu.edu" title="JHU Computational Psycholinguistics Lab">JHU Computational Psycholinguistics Lab</a></h1>
-		</div>
-		<div class="banner">
+	<body style="padding-top: 0px;">
+			<h1 id="blog-title" style="font-family: garamond;"><a style="color:#2d6970" href="https://psycholing.web.jhu.edu" title="JHU Computational Psycholinguistics Lab">Computational Psycholinguistics Lab</a></h1>
+			<h4 style="font-family: garamond;color:#54b3ac">@ Johns Hopkins University</h4>
+		
+		<div class="banner" style="background:#f7f7f7;border-top:3px solid #2d6970;border-bottom:3px solid #2d6970;">
 
 			<nav class="main-nav">
 			  <ul id="pagelinks">
@@ -65,40 +77,206 @@
 			  </ul>
 			</nav>
 		</div>
+
 		
-		<div id="container" class="row">
+
+		<img style="width:400px;height:300px;margin-left:auto;margin-right:auto;display:block;" src="images/thebrain.jpg">
+		
+		<div id="container"  style="width:80%;" class="row">
 			<div id="content" class="hfeed twelve columns">
 				<div id="post-2">
 					<div class="entry-content">
 						<div class="page" title="Page 1">
-							<div class="layoutArea">
-								<div class="column" style="text-align: left;">
-									{{ content }}
-								</div>
-								<div class="column" style="text-align: right;">
-									<div>
-										<b><u>Contact</u></b>
-										<p> Lab Manager: Brian Leonard</p>
-										<p>	Email: jhu.psycholing@gmail.com</p>
-										<p> Location: Room 113 of Krieger Hall on JHU's Homewood Campus</p>
+							<div class="flex-container">
+								<div class="column" style="text-align:left;width:100%;">
+
+									<div style= "text-align: left;">
+										<h2>Lab News</h3>
+										<hr />
+										<ul>
+											{% for newsitem in site.data.news %}
+											<h6><b>{{newsitem.date}}:</b> {{newsitem.text}}</h6>
+											{% endfor %}
+										</ul>
 									</div>
-									<ul>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-										<li>News Item</li>
-									</ul>
+									<div style="text-align: left;">
+										<h2>People</h3>
+										<hr />
+											<h3 id="principal-investigator">Principle Investigator</h3><hr />
+										{% for person in site.data.people %}
+										{% if person.group != 'PI' %}
+											{% continue %}
+										{% endif %}
+											<div>
+												
+												<div class="flex-container">
+													<img src="images/{{person.imagefile}}" style='width:200px;height:225px;padding-right: 30px;' />
+													<div style="display:block;">
+														<h4> <strong>{{person.name}}</strong>{% if person.site != '' %}
+														 (<a href="{{person.url}}">personal site</a>)<br />
+														{% endif %}</h4><br />
+														<a href="mailto: {{person.email}}">{{person.email}}</a><br />
+														
+														<h6>{{person.bio}}</h6>
+													</div>
+												</div>
+
+
+											</div>
+											<br />
+										{% endfor %}
+										<br />
+										<h3>Post-Docs</h3>
+										<hr />
+										{% for person in site.data.people %}
+										{% if person.group != 'postdoc' %}
+											{% continue %}
+										{% endif %}
+											<div>
+												<div class="flex-container">
+													<img src="images/{{person.imagefile}}" style='width:200px;height:225px;padding-right: 30px;' />
+													<div style="display:block;">
+														<h4> <strong>{{person.name}}</strong>{% if person.site != '' %}
+														 (<a href="{{person.url}}">personal site</a>)<br />
+														{% endif %}</h4><br />
+														<a href="mailto: {{person.email}}">{{person.email}}</a><br />
+														{% if person.site != '' %}
+														<a href="{{person.url}}">{{person.url}}</a><br />
+														{% endif %}
+														<h6>{{person.bio}}</h6>
+													</div>
+												</div>
+											</div>
+											<br />
+										{% endfor %}
+										<br />
+										<h3>PhD Students</h3>
+										<hr />
+										{% for person in site.data.people %}
+										{% if person.group != 'grad' %}
+											{% continue %}
+										{% endif %}
+											<div>
+												<div class="flex-container">
+													<img src="images/{{person.imagefile}}" style='width:200px;height:225px;padding-right: 30px;' />
+													<div style="display:block;">
+														<h4> <strong>{{person.name}}</strong></h4><br />
+														<a href="mailto: {{person.email}}">{{person.email}}</a><br />
+														{% if person.site != '' %}
+														<a href="{{person.url}}">{{person.url}}</a><br />
+														{% endif %}
+														<h6>{{person.bio}}</h6>
+													</div>
+												</div>
+											</div>
+											<br />
+										{% endfor %}
+										<br />
+										<h3>Affiliated Grad Students</h3>
+										<hr />
+										{% for person in site.data.people %}
+										{% if person.group != 'affiliatedgrad' %}
+											{% continue %}
+										{% endif %}
+											<div>
+												<div class="flex-container">
+													<img src="images/{{person.imagefile}}" style='width:200px;height:225px;padding-right: 30px;' />
+													<div style="display:block;">
+														<h4> <strong>{{person.name}}</strong></h4><br />
+														<a href="mailto: {{person.email}}">{{person.email}}</a><br />
+														{% if person.site != '' %}
+														<a href="{{person.url}}">{{person.url}}</a><br />
+														{% endif %}
+														<h6>{{person.bio}}</h6>
+													</div>
+												</div>
+											</div>
+											<br />
+										{% endfor %}
+										<br />
+										<h3>Lab Manager</h3>
+										<hr />
+										{% for person in site.data.people %}
+										{% if person.group != 'labmanager' %}
+											{% continue %}
+										{% endif %}
+											<div>
+												<div class="flex-container">
+													<img src="images/{{person.imagefile}}" style='width:200px;height:225px;padding-right: 30px;' />
+													<div style="display:block;">
+														<h4> <strong>{{person.name}}</strong></h4><br />
+														<a href="mailto: {{person.email}}">{{person.email}}</a><br />
+														{% if person.site != '' %}
+														<a href="{{person.url}}">{{person.url}}</a><br />
+														{% endif %}
+														<h6>{{person.bio}}</h6>
+													</div>
+												</div>
+											</div>
+											<br />
+										{% endfor %}
+									</div>
+									<div style="text-align:left;">
+										<h2 id="research">Research</h2>
+										<hr />
+										<h3>Overview</h3>
+										<p>What are the mental representations that constitute our knowledge of language? How do we use them to understand and produce language?</p>
+
+										<p>We address these questions using computational models and human experiments. The goal of our models is to mimic the processes that humans engage in when learning and processing language; these models often combine techniques from machine learning with representations from theoretical linguistics.</p>
+
+										<p>We then compare the predictions of these models to human language comprehension. In a typical experiment in our lab, we invite participants to read a range of sentences, and record how long they take to read each word, measured based on key presses or eye movements. Other techniques include artificial language learning experiments and neural measurements.</p>
+
+										<p>Finally, we use linguistics and psycholinguistics to understand and improve artificial intelligence systems, in particular “deep learning” models that are otherwise difficult to analyze.</p>
+										<h3 id="expectation-based-language-comprehension">Expectation-based language comprehension</h3>
+
+										<p>The probability of a word or a syntactic structure is a major predictor of how difficult they are to read. What are the syntactic representations over which those probability distributions are maintained? How is processing difficulty affected by the probability distribution we maintain over the representations we predict, and in particular, our uncertainty about the structure and meaning of the sentence?</p>
+
+										<p>We can study these questions by implementing computational models that which incorporate different representational assumptions, and deriving quantitative predictions from those models:</p>
+
+										<p><img src="images/subcatspr_predictions-e1488214811975.png" alt="image-1" style="display:block;margin:0 auto;" /></p>
+
+										<p>We can then measure to what extent these predictions match up with human sentence comprehension processes, as measured by reading times (eyetracking, self-paced reading) or neural measurements such as MEG.</p>
+
+										<p>Expectations are sometimes malleable and context-specific. If the person we’re talking to is unusually fond of a particular syntactic construction, say passive verbs, we might learn to expect them to use this construction more often than other people. In ongoing research, we’re investigating the extent to which our expectations for specific syntactic representations can vary from context to context.</p>
+
+										<h3 id="linguistic-representations-in-artificial-neural-networks">Linguistic representations in artificial neural networks</h3>
+
+										<p>Artificial neural networks are a powerful statistical learning technique that underpins some of the best-performing artificial intelligence software we have. Many of the neural networks that have been successful in practical applications do not have any explicit linguistic representations (e.g., syntax trees or logical forms). Is the performance of neural networks really as impressive when evaluated using rigorous linguistic and psycholinguistic tests? If so, how do these networks represent or approximate the structures that are normally seen as the building blocks of language?</p>
+
+										<p><img src="images/acceptor.png" alt="image-2" style="display:block;margin:0 auto;" /></p>
+
+										<p>A related topic of research is lexical representations in neural networks. Neural networks are typically allowed to evolve their own lexical representations, which are normally nothing but unstructured lists of numbers. We have explored to what extent such lexical representations implicitly capture the linguistic distinctions that are assumed in linguistics (in particular, formal semantics).</p>
+
+										<p><img src="images/Screen-Shot-2017-07-11-at-2.52.51-PM-1-300x134.png" alt="image-3" style="display:block;margin:0 auto;" /></p>
+
+										<h3 id="generalization-in-language">Generalization in language</h3>
+
+										<p>We regularly generalize our knowledge of language to words and sentences we have never heard before. When is our linguistic knowledge limited to a specific item, and when do we apply it to novel items? What representations do we use to generalize beyond the specific items that we have encountered?</p>
+
+										<p>We can often study these questions using artificial language learning experiments. In one experiment, for example, we taught participants an artificial language with a simple phonological regularity, and tested how they generalized this regularity to new sounds:</p>
+
+										<p><img src="images/Screen-Shot-2017-02-27-at-6.27.28-PM.png" alt="image-4" style="display:block;margin:0 auto;" /></p>
+
+										<p><img src="images/Screen-Shot-2017-02-27-at-6.24.04-PM.png" alt="image-5" style="display:block;margin:0 auto;" /></p>
+									</div>
+									<div style='text-align: left;'>
+										<h2>Publications</h2>
+										<hr />
+										<h3>In Progress</h3>
+										<hr />
+										{% bibliography --template bibtemplate --file In Progress --style _bibliography/cocolab_style.csl %}
+										<br />
+										<h3>Published</h3>
+										<hr />
+										{% for year in (2013..2017) reversed %}
+										<h4>{{year}}</h4>
+										{% bibliography  --template bibtemplate --file Published --style _bibliography/cocolab_style.csl --query @*[year={{year}}] %}
+										{% endfor %}
+
+
+									</div>
+
+
 								</div>
 							</div>
 						</div>

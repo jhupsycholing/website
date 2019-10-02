@@ -2,10 +2,12 @@
 # You don't need to edit this file, it's empty on purpose.
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: cleanhome
 ---
 
-## 
+### About Us
+
+---
 
 What are the mental representations that constitute our knowledge of language? How do we use them to understand and produce language?
 
@@ -17,6 +19,3 @@ We then compare the predictions of these models to human language comprehension.
 Finally, we use linguistics and psycholinguistics to understand and improve artificial intelligence systems, in particular "deep learning" models that are otherwise difficult to analyze.
 
 
----
-
-Currently located in **room 113 of Krieger Hall** on JHU's Homewood Campus

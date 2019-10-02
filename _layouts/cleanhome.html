@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="images/abrain.png">
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<title>JHU Computation and Psycholinguistics Lab | Johns Hopkins University</title>
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="assets/css/style.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Pontano+Sans|Open+Sans+Condensed:300|Quicksand|BenchNine:300|Oswald&effect=emboss">
+		<style>
+
+
+			#subtitle{
+				color:#94A187;
+				font-family: "Quicksand", sans-serif;
+				font-weight:normal;
+			}
+
+			
+			#pagelinks{
+				margin-top: .5%;
+				margin-bottom: .5%;
+				width:100%;
+				font-family: "BenchNine", sans-serif;
+			}
+			#pagelinks li{
+				width:8%;
+				display:inline;
+				float:center !important;
+			}
+			#pagelinks a{
+				font-size: 1.25em;
+				color:#333333 !important;
+			}
+			
+			#pagelinks a:hover{
+				color:#94A187 !important;
+			}
+
+
+			div.banner{
+				background:#D0D1AC;
+				border-top:.5em solid #D0D1AC;
+				border-bottom:.5em solid #D0D1AC;
+			}
+
+			
+
+			#images img{
+				max-width:28%;
+				height:250px;
+				margin-left:auto;
+				margin-right: auto;
+				display:inline;
+			}
+
+
+			#footer {
+				margin-top: 5%;
+			}
+
+
+			a{
+				color:#51635A !important;
+				font-weight:700 !important;
+
+			}
+			a:hover {
+				color:#94A187 !important;
+			}
+			
+			
+			
+			body{
+				background-image:url('images/backgroundpic.png');
+    			background-attachment: fixed;
+    			font-size: 100%
+
+			}
+			#thepage{
+				background:white;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				width:1000px;;
+				align-content:center;
+				margin-top:0px;
+				margin-left:auto;
+				margin-right:auto;
+				display:block;
+			}
+			#container{
+				width:85% !important;
+				padding-bottom: 2%;
+				font-family: "Pontano Sans", sans-serif;
+    			color: #333333;
+    			font-size: 1.15em;
+			}
+
+			hr {
+				border: solid #2d6970;
+				border-width: 2px 0 0;
+			}
+			.role-hr {
+				margin-left: 35%;
+				margin-right: 35%;
+				margin-bottom: 2%;
+				margin-top: 2%;
+			}
+
+			p {
+				padding-left:1%;
+				font-family:  sans-serif;
+    			color: #333333;
+    			font-size: 1.15em;
+			}
+			
+			li {	
+    			font-size: 1.15em;
+    			font-family: sans-serif !important;
+    			margin-bottom: 2%;
+			}
+
+			#intro p{
+				text-align:center;
+			}
+			#news {
+				padding-left: 12%;
+				padding-right: 12%;
+				list-style-position: inside;
+				text-align:left;
+				font-family: sans-serif;
+    			color: #333333;
+			}
+			.flex-container{
+				display:flex;
+				flex-direction:row;
+				padding-left:2%;
+				padding-right:2%;
+				margin-top: 5%;
+			}
+			.flex-container div{
+				padding-left:30px;
+			}
+
+			.name {
+				font-family: sans-serif;
+				font-size:1.75em;
+				display: inline-block;
+				margin-right: 1.5%;
+			}
+			.site {
+				font-family:  sans-serif;
+				font-size: 1.2em;
+			}
+			.email{
+				font-family:  sans-serif;
+				font-size: 1.2em;
+			}
+			.specific-role {
+				font-family:  sans-serif;
+				font-size: 1.2em;
+				display:inline-block;
+				padding-top:.1em;
+				padding-bottom:.1em;
+			}
+			.bio {
+				text-align:justify;
+			}
+			#lab-name {
+				font-family: Oswald, sans-serif;
+				padding-top: 2%;
+				padding-right: 3%;
+				padding-left: 3%;
+			}
+			h1 {
+				font-size: 5em
+			}
+			h2 {
+				font-family: Oswald, sans-serif;
+				color:#51635A !important;
+				font-size: 3.5em;
+				text-align: center;
+				margin-top: 1em;
+			}
+			h3 {
+				font-family: Quicksand, sans-serif;
+				font-size: 1.5em;
+				text-align: center;
+				margin-top: 0%;
+				color: #51635A !important;
+				font-weight:normal;
+				margin-bottom: 0%;
+			}
+			h4 {
+				font-family: "Open Sans Condensed", sans-serif;
+				font-size: 2em;
+			}
+			h6 {
+				font-family: "Open Sans Condensed", sans-serif;
+				font-size: 1.15em;
+			}
+			span a{
+				font-family: sans-serif;
+			}
+			span i{
+				font-family:sans-serif;
+			}
+			span{
+				margin-bottom: 4px;
+				font-family:sans-serif;
+				margin-top:4px;
+			}
+			.bio {
+    			padding-left:0px;
+			}
+			#research img{
+				display:block;
+				margin:0 auto;
+			}
+			.publications {
+				padding-left:40px;
+			}
+			#pubs h4{
+				padding-left:20px;
+				font-family:Quicksand;
+				color: #51635A !important;
+				font-weight:normal;
+			}
+			#pubs h3{
+				padding-left:10px;
+			}
+			.active{
+				color:#28425e !important;
+				text-decoration: underline !important;
+			}
+
+			.breaker{
+				width: 100vw;
+				height: 2em;
+				margin-left: calc(-1 * ((100vw - 100%) / 2));
+				background-image:url('images/backgroundpic.png');
+    			background-attachment: fixed;
+			}
+			.section-underline{
+				border: solid #D0D1AC;
+				border-width: 1em 0 0;
+				margin-top: 0 !important;
+			}
+			.person-img {
+				border-radius: 50% !important;
+				border-collapse: separate;
+			}
+			.person-holder {
+				max-height: 30%;
+			    max-width: 30%;
+			   	min-width: 30%;
+			   	height: 30%;
+			   	min-height: 30%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='thepage' ><a name='homelink' ></a>
+
+			<h1 id="lab-name" ><a href="https://psycholing.web.jhu.edu" title="JHU Computation and Psycholinguistics Lab">COMPUTATION AND PSYCHOLINGUISTICS LAB</a></h1>
+
+			<h4 id='subtitle'>@ JOHNS HOPKINS UNIVERSITY</h4>
+
+
+			<div class="banner">
+				<nav class="main-nav">
+				  <ul id="pagelinks">
+				    <li><a href="#homelink" >HOME</a></li>
+				    <li><a href="#newslink">LAB NEWS</a></li>
+				    <li><a href="#peoplelink" >PEOPLE</a></li>
+				    <li><a href="#researchlink" >RESEARCH</a></li>
+				    <li><a href="#publicationslink" >PUBLICATIONS</a></li>
+				    <li><a href="#jobslink" >JOIN US</a></li>
+				  </ul>
+				</nav>
+			</div>
+
+
+			<div id='images'>
+				<img id='syntax' src="images/syntax.svg" />
+				<img id='lstm' style="max-width:40%;width:40% !important;" src="images/lstm.png" />
+				<img id='eyetrack' src='images/eyetrack.png' />
+			</div>
+
+			<div id="container"  class="row">
+				<div class="column" style="text-align:left;width:100%;">
+
+					<hr />
+					<div id='intro'>
+						<p>What are the mental representations that constitute our knowledge of language? How do we use them to understand and produce language? In the <a href="./index.html" >Computation and Psycholinguistics Lab</a>, we address these questions and others through the use of computational models and human experiments. Our lab is part of the <a href="cogsci.jhu.edu/" >Department of Cognitive Science</a> at <a href="https://www.jhu.edu/" >Johns Hopkins University</a>, and we frequently collaborate with the <a href="https://www.clsp.jhu.edu/" > Center for Language and Speech Processing</a>. Read on to learn more about who we are and what we do. </p>
+					</div>
+					<hr />
+
+					<a name='newslink' ></a>
+
+					<div class='breaker'></div>
+
+					<div>
+
+						<h2 >LAB NEWS</h2>
+						<hr class='section-underline' />
+						
+						<ul id='news'>
+							{% for newsitem in site.data.news %}
+							<li>{{newsitem.text}} (<i>{{newsitem.date}}</i>) </li>
+							{% endfor %}
+						</ul>
+					</div>
+					<br />
+
+					<a name='peoplelink' ></a>
+
+					<div class='breaker'></div>
+
+					<div>
+						<h2 >PEOPLE</h2>
+						<hr class="section-underline"/>
+						<hr class="role-hr"/>
+						<h3 id="principal-investigator">PRINCIPAL INVESTIGATOR</h3>
+						<hr class="role-hr"/>
+						<br />
+						{% for person in site.data.people %}
+							{% if person.group != 'PI' %}
+								{% continue %}
+							{% endif %}
+							<div class="flex-container">
+								<div class='person-holder'>
+									<img class="person-img" src="images/{{person.imagefile}}" />
+								</div>
+								<div>
+									<span class='name'><b>{{person.name}}</b></span>{% if person.site != '' %} <span class="site" >( <a href="{{person.url}}">personal site</a> )</span>{% endif %}&nbsp;
+									<br>
+									<span class="specific-role"><i>{{person.title}}</i></span>
+									<br>
+									<span class="email"><a href="mailto: {{person.email}}">{{person.email}}</a></span>
+									<br><br>
+														
+									<p class='bio'>{{person.bio}}</p>
+								</div>
+							</div>
+						{% endfor %}
+
+						<br />
+						<br />
+
+						<hr class='role-hr' />
+						<h3 id="grad-students">GRADUATE STUDENTS</h3>
+						<hr class='role-hr' />
+
+						{% for person in site.data.people %}
+							{% if person.group != 'grad' %}
+								{% continue %}
+							{% endif %}
+							<div class="flex-container">
+								<div class='person-holder'>
+									<img class="person-img" src="images/{{person.imagefile}}" />
+								</div>
+								<div>
+									<span class='name'><b>{{person.name}}</b></span>{% if person.site != 'no' %} <span class="site" >( <a href="{{person.url}}">personal site</a> )</span>{% endif %}&nbsp;
+									<br>
+									<span class="specific-role"><i>{{person.title}}</i></span>
+									<br>
+									<span class="email"><a href="mailto: {{person.email}}">{{person.email}}</a></span>
+									<br><br>
+														
+									<p class='bio'>{{person.bio}}</p>
+								</div>
+							</div>
+							<br />
+						{% endfor %}
+						<br />
+
+						<hr class='role-hr' />
+						<h3 id="RA">UNDERGRADUATE RESEARCH ASSISTANTS</h3>
+						<hr class='role-hr' />
+
+						{% for person in site.data.people %}
+							{% if person.group != 'RA' %}
+								{% continue %}
+							{% endif %}
+							<div class="flex-container">
+								<div class='person-holder'>
+									<img class="person-img" src="images/{{person.imagefile}}" />
+								</div>
+								<div>
+									<span class='name'><b>{{person.name}}</b></span>{% if person.site %} <span class="site" >( <a href="{{person.url}}">personal site</a> )</span>{% endif %}&nbsp;
+									<br>
+									<span class="specific-role"><i>{{person.title}}</i></span>
+									<br>
+									<span class="email"><a href="mailto: {{person.email}}">{{person.email}}</a></span>
+									<br><br>
+														
+									<p class='bio'>{{person.bio}}</p>
+								</div>
+							</div>
+							<br />
+						{% endfor %}
+						<br />
+
+						<hr class='role-hr' />
+						<h3 id="labmanager">LAB MANAGER</h3>
+						<hr class='role-hr' />
+
+						{% for person in site.data.people %}
+							{% if person.group != 'labmanager' %}
+								{% continue %}
+							{% endif %}
+							<div class="flex-container">
+								<div class='person-holder'>
+									<img class="person-img" src="images/{{person.imagefile}}" />
+								</div>
+								<div>
+									<span class='name'><b>{{person.name}}</b></span>{% if person.site  %} <span class="site" >( <a href="{{person.url}}">personal site</a> )</span>{% endif %}&nbsp;
+									<br>
+									<span class="specific-role"><i>{{person.title}}</i></span>
+									<br>
+									<span class="email"><a href="mailto: {{person.email}}">{{person.email}}</a></span>
+									<br><br>
+														
+									<p class='bio'>{{person.bio}}</p>
+								</div>
+							</div>
+							<br />
+						{% endfor %}
+
+						<br />
+
+						<hr class='role-hr' />
+						<h3 id="labalumni">LAB ALUMNI</h3>
+						<hr class='role-hr' />
+
+						{% for person in site.data.people %}
+							{% if person.group != 'labalumni' %}
+								{% continue %}
+							{% endif %}
+							<div class="flex-container">
+								<div class='person-holder'>
+									<img class="person-img" src="images/{{person.imagefile}}" />
+								</div>
+								<div>
+									<span class='name'><b>{{person.name}}</b></span>{% if person.site != ''%} <span class="site" >( <a href="{{person.url}}">personal site</a> )</span>{% endif %}&nbsp;
+									<br>
+									<span class="specific-role"><i>{{person.title}}</i></span>
+									<br>
+									<span class="email"><a href="mailto: {{person.email}}">{{person.email}}</a></span>
+									<br><br>
+														
+									<p class='bio'>{{person.bio}}</p>
+								</div>
+							</div>
+							<br />
+						{% endfor %}
+
+						<br />
+						<br />
+					</div>
+					<br />
+
+					<a name='researchlink' ></a>
+					<div class='breaker'></div>
+
+					<div id='research'>
+						<h2 >RESEARCH</h2>
+						<hr class="section-underline"/>
+						<hr class="role-hr">
+						<h3>OVERVIEW</h3>
+						<hr class="role-hr">
+						<p><i>What are the mental representations that constitute our knowledge of language? How do we use them to understand and produce language?</i></p>
+
+						<p>We address these questions using computational models and human experiments. The goal of our models is to mimic the processes that humans engage in when learning and processing language; these models often combine techniques from machine learning with representations from theoretical linguistics.</p>
+
+						<p>We then compare the predictions of these models to human language comprehension. In a typical experiment in our lab, we invite participants to read a range of sentences, and record how long they take to read each word, measured based on key presses or eye movements. Other techniques include artificial language learning experiments and neural measurements.</p>
+
+						<p>Finally, we use linguistics and psycholinguistics to understand and improve artificial intelligence systems, in particular “deep learning” models that are otherwise difficult to analyze.</p>
+						
+						<hr class="role-hr">
+						<h3>EXPECTATION-BASED LANGUAGE COMPREHENSION</h3>
+						<hr class="role-hr">
+
+						<p>The probability of a word or a syntactic structure is a major predictor of how difficult they are to read. What are the syntactic representations over which those probability distributions are maintained? How is processing difficulty affected by the probability distribution we maintain over the representations we predict, and in particular, our uncertainty about the structure and meaning of the sentence?</p>
+
+						<p>We can study these questions by implementing computational models that which incorporate different representational assumptions, and deriving quantitative predictions from those models:</p>
+
+						<img src="images/subcatspr_predictions-e1488214811975.png" />
+
+						<p>We can then measure to what extent these predictions match up with human sentence comprehension processes, as measured by reading times (eyetracking, self-paced reading) or neural measurements such as MEG.</p>
+
+						<p>Expectations are sometimes malleable and context-specific. If the person we’re talking to is unusually fond of a particular syntactic construction, say passive verbs, we might learn to expect them to use this construction more often than other people. In ongoing research, we’re investigating the extent to which our expectations for specific syntactic representations can vary from context to context.</p>
+
+						<hr class="role-hr">
+						<h3>LINGUISTIC REPRESENTATIONS IN ARTIFICIAL NEURAL NETWORKS</h3>
+						<hr class="role-hr">
+
+						<p>Artificial neural networks are a powerful statistical learning technique that underpins some of the best-performing artificial intelligence software we have. Many of the neural networks that have been successful in practical applications do not have any explicit linguistic representations (e.g., syntax trees or logical forms). Is the performance of neural networks really as impressive when evaluated using rigorous linguistic and psycholinguistic tests? If so, how do these networks represent or approximate the structures that are normally seen as the building blocks of language?</p>
+
+						<img src="images/acceptor.png" />
+
+						<p>A related topic of research is lexical representations in neural networks. Neural networks are typically allowed to evolve their own lexical representations, which are normally nothing but unstructured lists of numbers. We have explored to what extent such lexical representations implicitly capture the linguistic distinctions that are assumed in linguistics (in particular, formal semantics).</p>
+
+						<img src="images/Screen-Shot-2017-07-11-at-2.52.51-PM-1-300x134.png" />
+
+						<hr class="role-hr">
+						<h3>GENERALIZATION IN LANGUAGE</h3>
+						<hr class="role-hr">
+
+						<p>We regularly generalize our knowledge of language to words and sentences we have never heard before. When is our linguistic knowledge limited to a specific item, and when do we apply it to novel items? What representations do we use to generalize beyond the specific items that we have encountered?</p>
+
+						<p>We can often study these questions using artificial language learning experiments. In one experiment, for example, we taught participants an artificial language with a simple phonological regularity, and tested how they generalized this regularity to new sounds:</p>
+
+						<img src="images/Screen-Shot-2017-02-27-at-6.27.28-PM.png" />
+
+						<img src="images/Screen-Shot-2017-02-27-at-6.24.04-PM.png" />
+					</div>
+					<br />
+
+					<a name='publicationslink' ></a>
+
+					<div class='breaker'></div>
+
+					<div id='pubs'>
+						<h2 >PUBLICATIONS</h2>
+						<hr class="section-underline"/>
+						
+						<hr class="role-hr">
+						<h3>IN PROGRESS</h3>
+						<hr class="role-hr">
+
+						<ul class='publications'>
+							{% bibliography --template bibtemplate --file In Progress --style _bibliography/cocolab_style.csl %}
+						</ul>
+
+						<br />
+
+						<hr class="role-hr">
+						<h3>PUBLISHED</h3>
+						<hr class="role-hr">
+
+						{% for year in (2013..2019) reversed %}
+							<h4>{{year}}</h4>
+							<ul class='publications'>
+								{% bibliography  --template bibtemplate --file Published --style _bibliography/cocolab_style.csl --query @*[year={{year}}] %}
+							</ul>
+						{% endfor %}
+
+
+					</div>
+
+					<div class='breaker'></div>
+					<a name='jobslink' ></a>
+
+					<div id='jobs'>
+						<h2>HIRING POSTDOCTORAL FELLOW:</h2>
+						<hr class="section-underline"/>
+
+						<hr class="role-hr">
+						<h3>MODELING LANGUAGE IN THE HUMAN BRAIN USING ARTIFICIAL NEURAL NETWORKS</h3>
+						<hr class="role-hr">
+						<p>A joint postdoctoral position is available in the labs of <a href='https://www.honeylab.org/'>Christopher Honey</a> and <a href='http://caplabjhu.org'>Tal Linzen</a> at Johns Hopkins University. </p>
+
+						<p>The goal of this project is to use state-of-the-art artificial neural networks to understand the mechanisms and architectures that enable the human brain to integrate linguistic information at the levels of syllables, words and sentences. For this purpose, the project lead will have access to high-fidelity intracranial recordings from the surface of the human brain, as people process sentences and narratives. In parallel, this project is expected to generate new computational models and analytic methods for natural language processing (NLP), informed and constrained by human data.</p>
+
+						<p>Johns Hopkins is home to a large and vibrant community in neuroscience and computational linguistics, and the training environment will span the Departments of Cognitive Science, Psychological and Brain Sciences, and Computer Science. The postdoctoral researcher will be affiliated with the <a href='https://www.clsp.jhu.edu/'>Center for Language and Speech Processing</a>, one of the world’s largest centers for computational linguistics. </p>
+
+						<p>For candidates who wish to collect new datasets, Hopkins provides a top-notch neuroimaging center, including 3T and 7T scanners; new TMS and EEG facilities housed in the PBS department; and access to human intracranial experiments via neurology collaborators in Baltimore and Toronto. The postdoctoral researcher will have access to a large number of GPUs for training neural networks and other computational models through the Maryland Advanced Research Computing Center.</p>
+
+						<p>The position is available immediately, though start date is somewhat flexible. Applications will be reviewed on a rolling basis. The initial appointment is for one year, with the opportunity for renewal thereafter. We especially encourage applications from women and members of minorities that are underrepresented in science.</p>
+
+						<hr class="role-hr">
+						<h3>QUALIFICATIONS</h3>
+						<hr class="role-hr">
+
+						<p>Candidates should have (i) a PhD in a relevant field (e.g., linguistics, cognitive science, neuroscience, physics, psychology, mathematics, or computer science) by the start date; (ii) a publication record that includes computational modeling and empirical data analysis. The ideal candidate will have a combined background in computational linguistics, machine learning and neuroscience.</p>
+
+						<hr class="role-hr">
+						<h3>APPLICATION INSTRUCTIONS</h3>
+						<hr class="role-hr">
+
+						<p>To apply, please email a cover letter (including a brief summary of previous research accomplishments and future plans), a current CV, and a relevant publication to <a href='mailto: neural.language.modeling.jhu@gmail.com'>neural.language.modeling.jhu@gmail.com</a>. In the CV or cover letter, please include contact information for three references. For any questions, feel free to email Chris Honey (<a href='mailto: chris.honey@jhu.edu'>chris.honey@jhu.edu</a>) and Tal Linzen (<a href='mailto: tal.linzen@jhu.edu'>tal.linzen@jhu.edu</a>).</p>
+
+						<br /><hr class="section-underline"/><br />
+					</div>
+					<div class='breaker'></div>
+					<div>
+
+						<a name='postdoc2' ></a>
+
+						<h2>HIRING POSTDOCTORAL FELLOW:</h2>
+						<hr class="section-underline"/>
+
+						<hr class="role-hr">
+						<h3>MODELING LANGUAGE USING ARTIFICIAL NEURAL NETWORKS</h3>
+						<hr class="role-hr">
+
+						<p>The Computation and Psycholinguistics Lab at Johns Hopkins University (caplabjhu.edu), directed by Tal Linzen (<a href='www.tallinzen.net'>tallinzen.net</a>), is seeking to hire a post-doctoral researcher. Research in the lab lies at the intersection of linguistics, psycholinguistics and deep learning (for a survey of some of the areas of research in the lab, see <a href='http://tallinzen.net/media/papers/linzen_2019_language.pdf'>this paper</a>). There is considerable flexibility as to the specific topic of research; potential areas include:</p>
+
+						<p>* Studying syntactic and semantic generalization across languages and neural network architectures. This topic is particularly well-suited to candidates with a strong background in syntax or semantics and significant computational skills; it does not require existing expertise in neural networks.</p>
+
+						<p>* Developing neural network models that learn syntax from the input available to a child and/or match human comprehension and reading behavior.</p>
+
+						<p>The training environment will span the Departments of Cognitive Science and Computer Science. The postdoctoral researcher will be affiliated with the <a href='https://www.clsp.jhu.edu/'>Center for Language and Speech Processing (CLSP)</a>, one of the world's largest centers for computational linguistics; collaborations with other groups at CLSP will be encouraged. The candidate will have access to extensive computational resources through the Maryland Advanced Research Computing Center, as well as an eye-tracker for running behavioral experiments, if relevant to the project.<p/>
+
+						<p>The position is available immediately, and start date is flexible. Applications will be reviewed on a rolling basis. The initial appointment is for one year, with the opportunity for renewal thereafter. We especially encourage applications from women and members of minorities that are underrepresented in science.</p>
+
+						<hr class="role-hr">
+						<h3>QUALIFICATIONS</h3>
+						<hr class="role-hr">
+
+						<p>Candidates should have a PhD in a relevant field (including, but not limited to, linguistics, psychology, cognitive science and computer science) by the start date.</p>
+
+						<hr class="role-hr">
+						<h3>APPLICATION INSTRUCTIONS</h3>
+						<hr class="role-hr">
+
+						<p>To apply, please email a cover letter (including a brief summary of previous research accomplishments and future plans), a current CV, and a relevant publication to tal.linzen@jhu.edu. In the CV or cover letter, please include contact information for three references. For any questions, feel free to email Tal Linzen (<a href='mailto: tal.linzen@jhu.edu'>tal.linzen@jhu.edu</a>).</p>
+
+
+					</div>
+					<div class='breaker'></div>
+					<h5 id='footer' style="text-align:center">Our lab is currently located in <u>room 113 of Krieger Hall</u> on JHU’s Homewood Campus</h5>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
